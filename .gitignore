@@ -1,0 +1,13 @@
+node_modules/
+
+# Build
+dist/
+/npm-debug.log
+
+# dataset e modelos de visão gerados (reproduzíveis com tools/)
+ml/dataset/
+ml/runs/
+*.pt
+ml/yolov5/
+ml/.venv-yolo/
+ml/.venv-tfjs/

@@ -1,0 +1,2 @@
+# usa import.meta.url (necessário para o webpack empacotar o Worker); o ESLint 6 não faz o parse
+src/ml/main.js

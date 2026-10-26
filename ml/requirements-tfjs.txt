@@ -1,0 +1,10 @@
+# Ambiente só da conversão para TensorFlow.js (ml/.venv-tfjs): separado do de treino porque o conversor do TFJS
+# exige TF + tf_keras (Keras 2). Pares fixados a partir do que já funcionou em outro projeto.
+tensorflow==2.19.0
+tf_keras==2.19.0          # o tfjs-layers 4.x não carrega o model.json gerado pelo Keras 3
+tensorflowjs==4.21.0
+tensorflow_decision_forests==1.12.0   # o tensorflowjs_converter importa este pacote (dependência implícita)
+numpy==2.1.3
+# instalar DEPOIS dos demais: o pip reclama do conflito com o TF 2.19 (<6), mas funciona (exigido pelo tfdf)
+protobuf==6.31.1
+setuptools==80.10.2       # tensorflow_hub (importado pelo conversor) ainda usa pkg_resources
